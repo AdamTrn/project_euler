@@ -29,5 +29,24 @@ int main () {
     }
 
     cout << sum << endl;
+
+
+    //alternative - inclusion-exclusion using sum formula (is O(1) )
+    sum = 0; 
+    int sum3, sum5, sum15;
+
+    sum3 = (999/3) * (3 + 999) / 2;
+    sum5 = (995/5) * (5 + 995) / 2;
+    
+    int i = 999;
+    while (i % 15) {
+        i--;
+    }
+    cout << i << endl;
+    sum15 = (i/15) * (15 + i) / 2;
+
+
+    sum = sum3 + sum5 - sum15;
+    cout << sum << endl;
     return 0;
 }
